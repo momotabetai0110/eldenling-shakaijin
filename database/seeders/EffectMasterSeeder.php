@@ -9,15 +9,20 @@ class EffectMasterSeeder extends Seeder
 {
     public function run(): void
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('effect_masters')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+
         $effects = [
             ['effect_name' => '集中力',               'demerit_rate' => 3],
             ['effect_name' => '好感度',               'demerit_rate' => 3],
             ['effect_name' => '移動速度',             'demerit_rate' => 3],
             ['effect_name' => '社用PC性能',           'demerit_rate' => 3],
             ['effect_name' => '目覚めの良さ',         'demerit_rate' => 3],
-            ['effect_name' => '身体能力上昇',         'demerit_rate' => 3],
-            ['effect_name' => 'PCスキル上昇',         'demerit_rate' => 3],
-            ['effect_name' => '文章力上昇',           'demerit_rate' => 3],
+            ['effect_name' => '身体能力',         'demerit_rate' => 3],
+            ['effect_name' => 'PCスキル',         'demerit_rate' => 3],
+            ['effect_name' => '文章力',           'demerit_rate' => 3],
             ['effect_name' => 'メンタル',             'demerit_rate' => 3],
             ['effect_name' => '忘れ物防止',           'demerit_rate' => 3],
             ['effect_name' => '睡眠の質',             'demerit_rate' => 3],

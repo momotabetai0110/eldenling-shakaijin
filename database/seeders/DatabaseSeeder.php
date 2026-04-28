@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             EffectMasterSeeder::class,
+            DemeritMasterSeeder::class, // 追加
         ]);
     }
 }
